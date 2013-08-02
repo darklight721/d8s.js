@@ -1,0 +1,151 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+
+$fore-color-1: #333; // black
+$back-color-1: #e74c3c; // red
+$back-color-2: #c0392b; // dark red
+$back-color-3: #2ecc71; // green
+$back-color-4: #27ae60; // dark green
+$padding: 10px;
+
+@mixin transition($props...) {
+  -webkit-transition: $props;
+  -moz-transition: $props;
+  -ms-transition: $props;
+  transition: $props;
+}
+
+@mixin transform($prop) {
+  -webkit-transform: $prop;
+  -moz-transform: $prop;
+  -ms-transform: $prop;
+  transform: $prop;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  color: $fore-color-1;
+  background-color: $back-color-2;
+  text-align: center;
+}
+
+header {
+  padding: 100px 0 50px 0;
+  background-color: $back-color-1;
+  box-shadow: 0 0 5px 0 rgba(#000, 0.1);
+}
+
+h1 {
+  font-size: 2em;
+
+  small {
+    display: inline-block;
+    font-size: 0.4em;
+    text-transform: uppercase;
+    text-align: left;
+    font-weight: normal;
+    border-left: 2px solid rgba($fore-color-1,0.7);
+    padding-left: 5px;
+  }
+}
+
+h3 {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: rgba($fore-color-1, 0.5);
+  letter-spacing: 3px;
+}
+
+.grouped {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  clear: both;
+
+  &:before, &:after {
+    position: absolute;
+    display: block;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    padding: $padding 0;
+    background-color: $back-color-2;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    @include transition(left 0.5s ease-out);
+  }
+
+  &:before {
+    left: 0;
+    content: "Down";
+    text-align: right;
+  }
+
+  &:after {
+    left: 50%;
+    content: "load";
+    text-align: left;
+  }
+
+  &:hover:before {
+    left: -50%;
+  }
+
+  &:hover:after {
+    left: 100%;
+  }
+
+  * {
+    float: left;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: $padding;
+  color: inherit;
+  background-color: $back-color-4;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  @include transition(color 0.5s);
+
+  &:hover {
+    color: $back-color-1;
+  }
+}
+
+.primary {
+  background-color: $back-color-3;
+}
+
+.usage {
+  padding-top: 30px;
+}
+
+.console, .code {
+  font-size: 1.5em;
+}
+
+.scan, .format {
+  color: $back-color-4;
+  outline: none;
+  @include transition(background-color 0.5s);
+  &:hover {
+    background-color: $back-color-1;
+    border-radius: 4px;
+    box-shadow: 0 0 5px 0 rgba(#000, 0.1);
+  }
+}
+
+.console {
+  display: inline-block;
+  @include transition(all 0.5s);
+}
+
+.light-up {
+  color: $back-color-4;
+  @include transform(scale(1.1,1.1));
+}

@@ -1,0 +1,157 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\0000324}}
+body {
+  margin: 0;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  color: #333333;
+  background-color: #c0392b;
+  text-align: center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\0000333}}
+header {
+  padding: 100px 0 50px 0;
+  background-color: #e74c3c;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\0000339}}
+h1 {
+  font-size: 2em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\0000342}}
+h1 small {
+  display: inline-block;
+  font-size: 0.4em;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: normal;
+  border-left: 2px solid rgba(51, 51, 51, 0.7);
+  padding-left: 5px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\0000353}}
+h3 {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: rgba(51, 51, 51, 0.5);
+  letter-spacing: 3px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\0000361}}
+.grouped {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  clear: both;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\0000367}}
+.grouped:before, .grouped:after {
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  padding: 10px 0;
+  background-color: #c0392b;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  -webkit-transition: left 0.5s ease-out;
+  -moz-transition: left 0.5s ease-out;
+  -ms-transition: left 0.5s ease-out;
+  transition: left 0.5s ease-out;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\0000380}}
+.grouped:before {
+  left: 0;
+  content: "Down";
+  text-align: right;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\0000386}}
+.grouped:after {
+  left: 50%;
+  content: "load";
+  text-align: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\0000392}}
+.grouped:hover:before {
+  left: -50%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\0000396}}
+.grouped:hover:after {
+  left: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\00003100}}
+.grouped * {
+  float: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\00003105}}
+.btn {
+  display: inline-block;
+  padding: 10px;
+  color: inherit;
+  background-color: #27ae60;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  transition: color 0.5s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\00003115}}
+.btn:hover {
+  color: #e74c3c;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\00003120}}
+.primary {
+  background-color: #2ecc71;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\00003124}}
+.usage {
+  padding-top: 30px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\00003128}}
+.console, .code {
+  font-size: 1.5em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\00003132}}
+.scan, .format {
+  color: #27ae60;
+  outline: none;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+  -ms-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\00003136}}
+.scan:hover, .format:hover {
+  background-color: #e74c3c;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\00003143}}
+.console {
+  display: inline-block;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/roy\/Projects\/yeoman\%20projects\/d8s\/app\/styles\/main\.scss}line{font-family:\00003148}}
+.light-up {
+  color: #27ae60;
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
